@@ -1,0 +1,45 @@
+{
+  "name": "kewler",
+  "version": "0.0.1",
+  "description": "functional programming color manipulation",
+  "main": "index.js",
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "keywords": [
+    "fp",
+    "functional",
+    "programming",
+    "functional",
+    "programming",
+    "color",
+    "manipulation",
+    "colour",
+    "darken",
+    "lighten",
+    "css"
+  ],
+  "author": "Adrien Antoine <adriantoine@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "hex-to-hsl": "^1.0.1",
+    "hsl-to-hex": "^1.0.0",
+    "lodash.curry": "^4.0.1",
+    "lodash.isarray": "^4.0.0",
+    "rgb-to-hsl": "0.0.2"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "babel-register": "^6.6.5",
+    "xo": "^0.14.0"
+  }
+}
