@@ -33,9 +33,7 @@
   "dependencies": {
     "hex-to-hsl": "^1.0.1",
     "hsl-to-hex": "^1.0.0",
-    "lodash.curry": "^4.0.1",
-    "lodash.isarray": "^4.0.0",
-    "rgb-to-hsl": "0.0.2"
+    "lodash.isarray": "^4.0.0"
   },
   "devDependencies": {
     "ava": "^0.14.0",
