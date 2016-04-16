@@ -7,7 +7,7 @@
 [![Stable version](https://img.shields.io/npm/v/kewler.svg)](https://www.npmjs.com/package/kewler)
 [![Dependency Status](https://img.shields.io/gemnasium/adriantoine/kewler.svg)](https://gemnasium.com/adriantoine/kewler)
 
-`kewler` is a simple __functional__ and __immutable__ color manipulation library.
+`kewler` is a simple __functional__ and __immutable__ color manipulation library. 🎨
 
 #### Mmmmh, what does it mean?
 
