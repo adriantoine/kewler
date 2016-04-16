@@ -77,9 +77,9 @@ console.log(ohMyBlue()); // Prints '#63e0ee'
 
 #### Woah! That's quite a lot of parenthesis!
 
-Oh sorry, I got a bit overexcited, my point is that you can create your wrapper and manipulate your wrapper as much as you want, all you have to remember is that __a color wrapper is always going to return another color wrapper if you pass it an argument__ (an alteration), and __it's always going to return a hex color when you execute it without any argument__.
+Oh sorry, I got a bit overexcited, my point is that you can create your wrapper and manipulate your wrapper as much as you want, all you have to remember is that __a color wrapper is always going to return a new color wrapper if you pass it an argument__ (an alteration), and __it's always going to return a hex color when you execute it without any argument__.
 
-That little wrapper that you get, you can pass it everywhere you want and modify it where you want, it's __[immutable](https://en.wikipedia.org/wiki/Immutable_object)__ and will return either a new wrapper or a HEX color value.
+That little wrapper that you get, you can pass it everywhere you want and modify it where you want, it's also __[immutable](https://en.wikipedia.org/wiki/Immutable_object)__.
 
 Writing your own alteration for a color is quite easy as well, an alteration is just a function that takes an [HSL color](https://css-tricks.com/yay-for-hsla/) value as an array and returns a new one:
 
@@ -90,7 +90,7 @@ const myNewBlue = blue(myAlteration);
 console.log(myNewBlue); // Prints '#56a5e1'
 ```
 
-Also, if you just want a one-off alteration on anything you can use the `color` function with more than one argument:
+Also, if you just want a one-off alteration, you can use the `color` function with more than one argument:
 
 ```js
 const oneOffLightBlueFromHex = color('#0593ff', lightness(10));
@@ -100,7 +100,7 @@ const oneOffLightBlueFromColor = color(blue(), saturation(-30), lightness(10));
 console.log(oneOffLightBlueFromColor); // Prints '#56a5e1'
 ```
 
-Ah and another thing (last one, I promise), you can use pass HSL values as an array (`[int, int, int]`) or an object (`{ hue: int, sat: int, lit: int }`):
+Ah and another thing (last one, I promise), you can pass a HSL value as an array (`[int, int, int]`) or an object (`{ hue: int, sat: int, lit: int }`):
 
 ```js
 const blueFromHSLArray = color([206, 100, 51]);
@@ -110,7 +110,7 @@ const blueFromHSLObject = color({hue: 206, sat: 100, lit: 51});
 console.log(blueFromHSLObject()); // Prints '#0593ff'
 ```
 
-I think that's it! Now have fun and enjoy a colorful life!
+I think that's it! Now have fun and enjoy a __colorful life__!
 
 #### Hold on bloody american! That's not quite the right way of spelling 'colour', you should be a bit more respectful with our ~~British~~ English language!
 
