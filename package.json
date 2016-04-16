@@ -14,7 +14,7 @@
     "babel": "inherit"
   },
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo && nyc --cache --reporter=text ava",
     "build": "babel src -d dist"
   },
   "keywords": [
@@ -43,6 +43,8 @@
     "ava": "^0.14.0",
     "babel-cli": "^6.7.5",
     "babel-register": "^6.7.2",
+    "coveralls": "^2.11.9",
+    "nyc": "^6.4.0",
     "xo": "^0.14.0"
   },
   "directories": {
