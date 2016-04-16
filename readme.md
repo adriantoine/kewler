@@ -9,9 +9,9 @@
 
 #### Mmmmh, what does it mean?
 
-Ok, there is quite a few color manipulation function, but they are all kinda object oriented when you create your object instance and manipulate it, this one is more like a functional one, where you create an immutable color wrapper which is a function and run any alteration you want and eventually get a hex color.
+Ok, there is quite a few color manipulation libraries, but they are all kinda object oriented where you create your object instance and manipulate it. This one is more like a functional one, where you create an __immutable__ color wrapper which is a function and run any alteration you want and eventually get a hex color.
 
-For example:
+That's gonna be easier with an example:
 
 ```js
 import {color} from 'kewler';
@@ -22,9 +22,9 @@ console.log(blue()); // Prints '#0593ff'
 
 Cool, you have a blue color boxed and wrapped.
 
-#### HOLD ON! You've just made a function which returns the values passed as first parameter, I can do it myself!!
+#### HOLD ON! You've just made a function which returns the first parameter, I can do it myself!!
 
-Ok sorry, that wrapper does a bit more... Want to get a darker one? Here you go:
+Ok well, that wrapper does a bit more... Want to get a lighter one? There you go:
 
 ```js
 import {lightness} from 'kewler';
@@ -33,9 +33,9 @@ const lightBlue = blue(lightness(10));
 console.log(lightBlue()); // Prints '#38a9ff'
 ```
 
-Now you have another wrapper with a color 10% lighter!
+Now you have another wrapper with a color 10% lighter! Whenever you want your color as a HEX value, just run it without any argument.
 
-#### An old senator that I met last week told me that the dark side is more cool, can I have it pls?
+#### [An old senator](http://vignette2.wikia.nocookie.net/starwars/images/9/9a/Palp_trustme.jpg) that I met last week told me that the dark side is more cool, can I have it pls?
 
 Oh well you can do whatever you want with your wrapper now, want a darker one? Here you go:
 
