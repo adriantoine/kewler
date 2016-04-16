@@ -1,6 +1,6 @@
 
 import test from 'ava';
-import {saturation} from '../index';
+import {saturation} from '../src/index';
 
 import {blueHslObj, blueHslArray, blueHslArrayPale} from './_fixtures';
 

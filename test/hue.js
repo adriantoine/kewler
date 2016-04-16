@@ -1,6 +1,6 @@
 
 import test from 'ava';
-import {hue} from '../index';
+import {hue} from '../src/index';
 
 import {blueHslObj, blueHslArray, blueHslArrayHue} from './_fixtures';
 

@@ -1,6 +1,6 @@
 
 import test from 'ava';
-import {lightness} from '../index';
+import {lightness} from '../src/index';
 
 import {blueHslObj, blueHslArray, blueHslArrayDarken} from './_fixtures';
 

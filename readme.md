@@ -125,7 +125,7 @@ Ok now that's it, enjoy!
 
 - _No no no! You can't get away like this! Your library always returns a HEX value, but I need a HSL/RGB/Somethingelse value for my application!_
 
-Well, I want to keep it simple and I think that most browsers and system support HEX color values, so that's why library returns it, if you want to stay functional, there are tons of converters which will convert HEX values to any other system, if you think returning HEX values is not a good choice, I'd love to discuss about it in a Github issue. You can also use another color manipulation library like [TinyColor](https://github.com/bgrins/TinyColor) (I have never used it, it's just the first result from Google).
+Well, I want to keep it simple and I think that most browsers and system support HEX color values, so that's why library returns it, if you want to stay functional, there are tons of converters which will convert HEX values to any other system, if you think returning HEX values is not a good choice, I'd love to discuss about it in a [Github issue](https://github.com/adriantoine/kewler/issues). You can also use another color manipulation library like [TinyColor](https://github.com/bgrins/TinyColor) (I have never used it, it's just the first result from Google).
 
 My library also doesn't support transparency, but that's something I'm looking at.
 

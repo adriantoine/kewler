@@ -2,7 +2,8 @@
   "name": "kewler",
   "version": "0.1.0",
   "description": "functional programming color manipulation",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
   "ava": {
     "files": [
       "test/**/*.js"
@@ -13,7 +14,8 @@
     "babel": "inherit"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava",
+    "build": "babel src -d dist"
   },
   "keywords": [
     "fp",
@@ -39,7 +41,19 @@
   },
   "devDependencies": {
     "ava": "^0.14.0",
+    "babel-cli": "^6.7.5",
     "babel-register": "^6.7.2",
     "xo": "^0.14.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriantoine/kewler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adriantoine/kewler/issues"
+  },
+  "homepage": "https://github.com/adriantoine/kewler#readme"
 }
