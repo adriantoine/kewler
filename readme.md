@@ -4,6 +4,8 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?maxAge=2592000)](https://github.com/sindresorhus/xo)
 [![Travis](https://img.shields.io/travis/adriantoine/kewler.svg)](https://travis-ci.org/adriantoine/kewler)
 [![Coveralls](https://img.shields.io/coveralls/adriantoine/kewler.svg)](https://coveralls.io/github/adriantoine/kewler)
+[![Stable version](https://img.shields.io/npm/v/kewler.svg)](https://www.npmjs.com/package/kewler)
+[![Dependency Status](https://img.shields.io/gemnasium/adriantoine/kewler.svg)](https://gemnasium.com/adriantoine/kewler)
 
 `kewler` is a simple __functional__ and __immutable__ color manipulation library.
 
