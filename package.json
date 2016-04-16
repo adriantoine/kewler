@@ -33,7 +33,10 @@
   "dependencies": {
     "hex-to-hsl": "^1.0.2",
     "hsl-to-hex": "^1.0.0",
-    "lodash.isarray": "^4.0.0"
+    "lodash.curry": "^4.0.1",
+    "lodash.flow": "^3.3.0",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isfunction": "^3.0.8"
   },
   "devDependencies": {
     "ava": "^0.14.0",

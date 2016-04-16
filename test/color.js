@@ -1,17 +1,22 @@
 
 import test from 'ava';
-import {color} from '../index';
+import {color, lightness} from '../index';
 
-import {blueHslObj, blueHslArray, blueHex} from './_fixtures';
+import {blueHslArray} from './_fixtures';
 
-test('color returns a hex color from an object', t => {
-	t.is(color(blueHslObj)(), blueHex);
+test('color returns a black color by default', t => {
+	t.is(color(), '#000000');
+	t.is(color(null), '#000000');
+	t.is(color(() => null), '#000000');
 });
 
-test('color returns a hex color from an array', t => {
-	t.is(color(blueHslArray)(), blueHex);
+test('color with a color and alteration passed, returns the altered color', t => {
+	t.is(color(blueHslArray, lightness(-10)), '#0076d1');
+	t.is(color(color(blueHslArray), lightness(-10)), '#0076d1');
 });
 
-test('color returns a hex color from an hex string', t => {
-	t.is(color(blueHex)(), blueHex);
+test('color with a color and several alteration passed, returns the altered color', t => {
+	t.is(color(blueHslArray, lightness(-10), lightness(-5)), '#0068b8');
+	t.is(color(blueHslArray, lightness(-10), lightness(-5), lightness(50)), '#b8e0ff');
+	t.is(color(color(blueHslArray), lightness(-10), lightness(-5), lightness(50)), '#b8e0ff');
 });

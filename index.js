@@ -1,64 +1,65 @@
 
-import isArray from 'lodash.isarray';
-import hslToHex from 'hsl-to-hex';
-import hexToHsl from 'hex-to-hsl';
-
-// Change an hsl object { hue: int, sat: int, lit: int } to an array [int, int, int]
-const hslObjToArray = ({hue, sat, lit}) => [hue, sat, lit];
-
-// Returns a boolean telling if this is a valid hsl array [int, int, int]
-const isValidHSL = c =>
-	isArray(c) && c.length === 3 &&
-	typeof c[0] === 'number' && c[0] >= 0 && c[0] <= 360 &&
-	typeof c[1] === 'number' && c[1] >= 0 && c[1] <= 100 &&
-	typeof c[2] === 'number' && c[2] >= 0 && c[2] <= 100;
-
-// Returns a boolean telling if this is a valid hsl object { hue: int, sat: int, lit: int }
-const isHSLObject = c =>
-	typeof c === 'object' && isValidHSL(hslObjToArray(c));
-
-// Returns a boolean telling if this is a valid hex color '#ffffff'
-const isHexColor = c => typeof c === 'string' && c.length === 7;
-
-// Return an HSL array whatever the color type is passed
-const toHSL = c => {
-	if (isValidHSL(c)) {
-		return c;
-	}
-
-	if (isHSLObject(c)) {
-		return hslObjToArray(c);
-	}
-
-	if (isHexColor(c)) {
-		return hexToHsl(c);
-	}
-
-	throw (new Error('Color type is not supported: ' + c));
-};
+import flow from 'lodash.flow';
+import isFunction from 'lodash.isfunction';
+import {colorToHSL, colorToHex} from './transformers';
+import {isHSLArray, isHSLObject, isHexColor} from './validation';
 
 // Makes sure the function gets an HSL object
-const withHSL = func => c => func(toHSL(c));
+const withHSL = func => c => func(colorToHSL(c));
 
-// Returns an hex string value, whatever HSL type is passed in argument
-const getHex = c => {
-	if (isArray(c)) {
-		return hslToHex(...c);
-	}
-
-	if (isHSLObject(c)) {
-		return hslToHex(c.hue, c.sat, c.lit);
-	}
-
-	if (isHexColor(c)) {
-		return c;
-	}
-
-	throw (new Error('Color type is not supported: ' + c));
-};
+const isValidColor = col => col && (isHSLArray(col) || isHSLObject(col) || isHexColor(col));
 
 // Return hex from a color
-export const color = c => alteration => getHex(alteration ? alteration(c) : c);
+export const color = (col, ...colAlts) => {
+	// If the color passed is a function, execute it
+	if (isFunction(col)) {
+		col = col();
+	}
 
-// Darken a color
-export const darken = percent => withHSL(([hue, sat, lit]) => ([hue, sat, lit - percent]));
+	// If nothing is passed, return a black color by default
+	if (!col) {
+		return '#000000';
+	}
+
+	// Validate
+	if (!isValidColor(col)) {
+		throw new Error('Color passed is not a valid color');
+	}
+
+	// When alterations are passed, process the color and return an hex value
+	if (colAlts.length) {
+		let alteration = flow(colAlts);
+		return colorToHex(alteration(col));
+	}
+
+	// If just a color is passed, return a function which takes alterations
+	return (...alts) => {
+		const firstArg = alts[0];
+		if (firstArg && isValidColor(firstArg)) {
+			return color(firstArg);
+		}
+
+		// Return the altered color wrapper if alterations are passed
+		if (alts.length) {
+			let alteration = flow(alts);
+			return color(alteration(col));
+		}
+
+		// If no argument is passed, return the hex color
+		return colorToHex(col);
+	};
+};
+
+color.identity = '254f68f5d610c334b403dd25505e0e8d4ad85a1b22dd0f51a1bc1267bdfd421d';
+
+// British proxy
+export const colour = color;
+
+// Alter lightness of an hsl color
+export const lightness = percent => withHSL(([hue, sat, lit]) => ([hue, sat, lit + percent]));
+
+// Alter saturation of an hsl color
+export const saturation = percent => withHSL(([hue, sat, lit]) => ([hue, sat + percent, lit]));
+
+// Alter hue of an hsl color
+export const hue = percent => withHSL(([hue, sat, lit]) => ([hue + percent, sat, lit]));
