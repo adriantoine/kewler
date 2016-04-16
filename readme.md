@@ -4,9 +4,9 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![Travis](https://img.shields.io/travis/adriantoine/kewler.svg?maxAge=2592000)](https://travis-ci.org/adriantoine/kewler)
 
-`kewler` is a simple functional and immutable color manipulation library.
+`kewler` is a simple __functional__ and __immutable__ color manipulation library.
 
-## What does it mean?
+#### Mmmmh, what does it mean?
 
 Ok, there is quite a few color manipulation function, but they are all kinda object oriented when you create your object instance and manipulate it, this one is more like a functional one, where you create an immutable color wrapper which is a function and run any alteration you want and eventually get a hex color.
 
@@ -21,7 +21,7 @@ console.log(blue()); // Prints '#0593ff'
 
 Cool, you have a blue color boxed and wrapped.
 
-- _HOLD ON! You've just made a function which returns the values passed as first parameter, I can do it myself!!_
+#### HOLD ON! You've just made a function which returns the values passed as first parameter, I can do it myself!!
 
 Ok sorry, that wrapper does a bit more... Want to get a darker one? Here you go:
 
@@ -34,7 +34,7 @@ console.log(lightBlue()); // Prints '#38a9ff'
 
 Now you have another wrapper with a color 10% lighter!
 
-- _An old senator that I met last week told me that the dark side is more cool, can I have it pls?_
+#### An old senator that I met last week told me that the dark side is more cool, can I have it pls?
 
 Oh well you can do whatever you want with your wrapper now, want a darker one? Here you go:
 
@@ -43,7 +43,7 @@ const darkLightBlue = lightBlue(lightness(-30));
 console.log(darkBlue()); // Prints '#005a9e'
 ```
 
-- _Hhhm nice, but color is a bit more than just light and dark... I'm just not gonna use your library if..._
+#### Hhhm nice, but color is a bit more than just light and dark... I'm just not gonna use your library if...
 
 Ok ok, you can change saturation and hue as well:
 
@@ -74,7 +74,7 @@ const ohMyBlue = blue(lightness(-10), hue(-30), lightness(5))(saturation(-20), h
 console.log(ohMyBlue()); // Prints '#63e0ee'
 ```
 
-- _Woah! That's quite a lot of parenthesis!_
+#### Woah! That's quite a lot of parenthesis!
 
 Oh sorry, I got a bit overexcited, my point is that you can create your wrapper and manipulate your wrapper as much as you want, all you have to remember is that __a color wrapper is always going to return another color wrapper if you pass it an argument__ (an alteration), and __it's always going to return a hex color when you execute it without any argument__.
 
@@ -111,7 +111,7 @@ console.log(blueFromHSLObject()); // Prints '#0593ff'
 
 I think that's it! Now have fun and enjoy a colorful life!
 
-- _Hold on bloody american! That's not quite the right way of spelling 'colour', you should be a bit more respectful with our ~~British~~ English language!_
+#### Hold on bloody american! That's not quite the right way of spelling 'colour', you should be a bit more respectful with our ~~British~~ English language!
 
 Ah, mmh, [I'm not american at all](http://adriantoine.com/about-me), I just thought that in IT, the american way of spelling english is more common, but as I'm currently living in England, I made a proxy `colour`, just for you!
 
@@ -124,7 +124,7 @@ console.log(blue()); // Prints '#0593ff'
 
 Ok now that's it, enjoy!
 
-- _No no no! You can't get away like this! Your library always returns a HEX value, but I need a HSL/RGB/Somethingelse value for my application!_
+#### No no no! You can't get away like this! Your library always returns a HEX value, but I need a HSL/RGB/Somethingelse value for my application!
 
 Well, I want to keep it simple and I think that most browsers and system support HEX color values, so that's why library returns it, if you want to stay functional, there are tons of converters which will convert HEX values to any other system, if you think returning HEX values is not a good choice, I'd love to discuss about it in a [Github issue](https://github.com/adriantoine/kewler/issues). You can also use another color manipulation library like [TinyColor](https://github.com/bgrins/TinyColor) (I have never used it, it's just the first result from Google).
 
