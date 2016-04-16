@@ -4,7 +4,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![Travis](https://img.shields.io/travis/adriantoine/kewler.svg?maxAge=2592000)](https://travis-ci.org/adriantoine/kewler)
 
-`kewler` is a simple functional and immutable color manipulation library.
+`kewler` is a simple __functional__ and __immutable__ color manipulation library.
 
 #### Mmmmh, what does it mean?
 
