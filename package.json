@@ -1,7 +1,7 @@
 {
   "name": "kewler",
   "version": "1.0.1",
-  "description": "functional programming color manipulation",
+  "description": "Simple functional and immutable color manipulation library",
   "main": "dist/index.js",
   "jsnext:main": "src/index.js",
   "ava": {
@@ -18,16 +18,21 @@
     "build": "babel src -d dist"
   },
   "keywords": [
-    "fp",
+    "simple",
+    "immutable",
     "functional",
     "programming",
+    "fp",
     "functional",
     "programming",
     "color",
     "manipulation",
     "colour",
     "darken",
+    "lightness",
     "lighten",
+    "saturation",
+    "hue",
     "css"
   ],
   "author": "Adrien Antoine <adriantoine@gmail.com>",
