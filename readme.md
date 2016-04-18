@@ -77,7 +77,7 @@ console.log(ohMyBlue()); // Prints '#63e0ee'
 
 #### Woah! That's quite a lot of parenthesis!
 
-Oh sorry, I got a bit overexcited, my point is that you can create your wrapper and manipulate your wrapper as much as you want, all you have to remember is that __a color wrapper is always going to return a new color wrapper if you pass it an argument__ (an alteration), and __it's always going to return a hex color when you execute it without any argument__.
+Oh sorry, I got a bit overexcited, my point is that you can create your wrapper and manipulate it as much as you want, all you have to remember is that __a color wrapper is always going to return a new color wrapper if you pass it an argument__ (an alteration), and __it's always going to return a hex color when you execute it without any argument__.
 
 That little wrapper that you get, you can pass it everywhere you want and modify it where you want, it's also __[immutable](https://en.wikipedia.org/wiki/Immutable_object)__.
 
