@@ -50,8 +50,6 @@ export const color = (col, ...colAlts) => {
 	};
 };
 
-color.identity = '254f68f5d610c334b403dd25505e0e8d4ad85a1b22dd0f51a1bc1267bdfd421d';
-
 // British proxy
 export const colour = color;
 
