@@ -1,4 +1,6 @@
 
+![kewler](https://raw.githubusercontent.com/adriantoine/kewler/master/media/kewler.png)
+
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?maxAge=2592000)](https://github.com/sindresorhus/xo)
 [![Travis](https://img.shields.io/travis/adriantoine/kewler.svg)](https://travis-ci.org/adriantoine/kewler)
 [![Coveralls](https://img.shields.io/coveralls/adriantoine/kewler.svg)](https://coveralls.io/github/adriantoine/kewler)
