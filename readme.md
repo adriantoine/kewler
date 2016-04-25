@@ -43,7 +43,7 @@ Oh well you can do whatever you want with your wrapper now, want a darker one? H
 
 ```js
 const darkLightBlue = lightBlue(lightness(-30));
-console.log(darkBlue()); // Prints '#005a9e'
+console.log(darkLightBlue()); // Prints '#005a9e'
 ```
 
 #### Hhhm nice, but color is a bit more than just light and dark... I'm just not gonna use your library if...
