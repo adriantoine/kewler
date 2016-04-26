@@ -1,5 +1,5 @@
 
-# ![kewler](https://cdn.rawgit.com/adriantoine/kewler/master/media/kewler_small.png)
+<img src='https://cdn.rawgit.com/adriantoine/kewler/master/media/kewler.svg' alt='kewler' width='500'>
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?maxAge=2592000)](https://github.com/sindresorhus/xo)
 [![Travis](https://img.shields.io/travis/adriantoine/kewler.svg)](https://travis-ci.org/adriantoine/kewler)
