@@ -15,6 +15,7 @@
   },
   "scripts": {
     "test": "xo && nyc --cache --reporter=text ava",
+    "prepublish": "npm run build",
     "build": "babel src -d dist"
   },
   "keywords": [
@@ -46,7 +47,7 @@
   },
   "devDependencies": {
     "ava": "^0.14.0",
-    "babel-cli": "^6.7.5",
+    "babel-cli": "^6.7.7",
     "babel-register": "^6.7.2",
     "coveralls": "^2.11.9",
     "nyc": "^6.4.0",
