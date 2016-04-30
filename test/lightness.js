@@ -2,7 +2,7 @@
 import test from 'ava';
 import {saturation} from '../src/index';
 
-import {blueHslObj, blueHslArray, blueHslArrayPale} from './_fixtures';
+import {blueHslObj, blueHslArray, blueHslArrayPale} from './fixtures';
 
 const pale10 = saturation(-10);
 

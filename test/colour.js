@@ -2,7 +2,7 @@
 import test from 'ava';
 import {colour, lightness} from '../src/index';
 
-import {blueHslArray} from './_fixtures';
+import {blueHslArray} from './fixtures';
 
 test('color returns a black color by default', t => {
 	t.is(colour(), '#000000');

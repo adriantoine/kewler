@@ -54,10 +54,10 @@ export const color = (col, ...colAlts) => {
 export const colour = color;
 
 // Alter lightness of an hsl color
-export const lightness = percent => withHSL(([hue, sat, lit]) => ([hue, sat, lit + percent]));
+export const lightness = percent => withHSL(([hue, sat, lit]) => [hue, sat, lit + percent]);
 
 // Alter saturation of an hsl color
-export const saturation = percent => withHSL(([hue, sat, lit]) => ([hue, sat + percent, lit]));
+export const saturation = percent => withHSL(([hue, sat, lit]) => [hue, sat + percent, lit]);
 
 // Alter hue of an hsl color
-export const hue = percent => withHSL(([hue, sat, lit]) => ([hue + percent, sat, lit]));
+export const hue = percent => withHSL(([hue, sat, lit]) => [hue + percent, sat, lit]);

@@ -2,7 +2,7 @@
 import test from 'ava';
 import {color, lightness} from '../src/index';
 
-import {blueHslArray, blueHslObj} from './_fixtures';
+import {blueHslArray, blueHslObj} from './fixtures';
 
 test('color with just a color passed returns a function which returns the color', t => {
 	t.is(color(blueHslArray)(), '#0593ff');

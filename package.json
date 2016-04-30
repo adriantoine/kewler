@@ -6,7 +6,8 @@
   "jsnext:main": "src/index.js",
   "ava": {
     "files": [
-      "test/**/*.js"
+      "test/**/*.js",
+      "!test/fixtures.js"
     ],
     "require": [
       "babel-register"
