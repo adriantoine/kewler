@@ -6,7 +6,8 @@
   "jsnext:main": "src/index.js",
   "ava": {
     "files": [
-      "test/**/*.js"
+      "test/**/*.js",
+      "!test/fixtures.js"
     ],
     "require": [
       "babel-register"
@@ -50,7 +51,7 @@
     "babel-register": "^6.7.2",
     "coveralls": "^2.11.9",
     "nyc": "^6.4.0",
-    "xo": "^0.14.0"
+    "xo": "^0.15.0"
   },
   "directories": {
     "test": "test"

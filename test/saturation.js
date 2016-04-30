@@ -2,7 +2,7 @@
 import test from 'ava';
 import {lightness} from '../src/index';
 
-import {blueHslObj, blueHslArray, blueHslArrayDarken} from './_fixtures';
+import {blueHslObj, blueHslArray, blueHslArrayDarken} from './fixtures';
 
 const darken10 = lightness(-10);
 

@@ -2,7 +2,7 @@
 import test from 'ava';
 import {hue} from '../src/index';
 
-import {blueHslObj, blueHslArray, blueHslArrayHue} from './_fixtures';
+import {blueHslObj, blueHslArray, blueHslArrayHue} from './fixtures';
 
 const hue10 = hue(10);
 
