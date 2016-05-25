@@ -46,7 +46,7 @@
     "lodash.isfunction": "^3.0.8"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "^0.15.0",
     "babel-cli": "^6.8.0",
     "babel-register": "^6.8.0",
     "coveralls": "^2.11.9",
