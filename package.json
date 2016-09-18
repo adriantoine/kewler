@@ -15,7 +15,7 @@
     "babel": "inherit"
   },
   "scripts": {
-    "test": "xo && nyc --cache --reporter=text ava",
+    "test": "xo && NODE_ENV=test nyc --cache --reporter=text ava",
     "prepublish": "npm run build",
     "build": "rm -rf dist/ && rollup -c"
   },
@@ -46,7 +46,7 @@
     "lodash.isfunction": "^3.0.8"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "^0.16.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-register": "^6.8.0",
     "coveralls": "^2.11.9",
@@ -54,7 +54,7 @@
     "rollup": "^0.35.12",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "xo": "^0.15.0"
+    "xo": "^0.16.0"
   },
   "repository": {
     "type": "git",
