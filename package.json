@@ -1,6 +1,6 @@
 {
   "name": "kewler",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple functional and immutable color manipulation library",
   "main": "dist/index.js",
   "jsnext:main": "dist/es.js",
