@@ -3,3 +3,6 @@ test
 .travis.yml
 .nyc_output
 coverage
+.babelrc
+media
+src
