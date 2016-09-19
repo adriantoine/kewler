@@ -2,7 +2,7 @@ import path from 'path';
 import babel from 'rollup-plugin-babel';
 import nodeResolve from 'rollup-plugin-node-resolve';
 
-const pkg = require('./package.json');
+var pkg = require('./package.json');
 
 export default {
 	entry: path.resolve(__dirname, 'src/index.js'),
