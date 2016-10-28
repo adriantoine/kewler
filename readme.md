@@ -136,7 +136,7 @@ My library also doesn't support transparency, but that's something I'm looking a
 Ok so just before going, here is the command to install it:
 
 ```console
-$ npm install --save kewler
+npm install --save kewler
 ```
 
 Have fun!
