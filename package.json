@@ -52,7 +52,7 @@
     "coveralls": "^2.11.15",
     "nyc": "^10.0.0",
     "rollup": "^0.37.0",
-    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-babel": "^2.7.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "xo": "^0.16.0"
   },
