@@ -46,7 +46,7 @@
     "lodash.isfunction": "^3.0.8"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-register": "^6.8.0",
     "coveralls": "^2.11.15",
