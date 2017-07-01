@@ -1,5 +1,4 @@
 
-import isArray from 'lodash.isarray';
 import _hslToHex from 'hsl-to-hex';
 import hexToHsl from 'hex-to-hsl';
 
@@ -24,7 +23,7 @@ export const colorToHSL = c => {
 
 // Returns an hex string value, whatever color type is passed in argument
 export const colorToHex = c => {
-	if (isArray(c)) {
+	if (Array.isArray(c)) {
 		return _hslToHex(...c);
 	}
 
